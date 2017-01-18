@@ -1,12 +1,14 @@
 package com.epam.java.mentoring.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.epam.java.mentoring.entities.Accident;
 import com.epam.java.mentoring.entities.DistrictAuthority;
 import com.epam.java.mentoring.repositories.AccidentRepository;
 import com.epam.java.mentoring.repositories.DistrictAuthorityRepository;
 
+@Service
 public class MySpringDemoServiceImpl implements MySpringDemoService {
 
 	@Autowired
