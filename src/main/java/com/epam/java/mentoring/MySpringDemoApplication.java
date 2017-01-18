@@ -6,10 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
@@ -17,11 +14,12 @@ import com.epam.java.mentoring.entities.Customer;
 import com.epam.java.mentoring.repositories.CustomerRepository;
 
 @SpringBootApplication
-//@EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class })
+// @EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class,
+// HibernateJpaAutoConfiguration.class })
 public class MySpringDemoApplication {
-	
+
 	private static final Logger log = LoggerFactory.getLogger(MySpringDemoApplication.class);
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(MySpringDemoApplication.class, args);
 	}
@@ -40,6 +38,7 @@ public class MySpringDemoApplication {
 
 		};
 	}
+
 	@Bean
 	public CommandLineRunner JpaDemo(CustomerRepository repository) {
 		return (args) -> {
